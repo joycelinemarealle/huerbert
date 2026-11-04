@@ -1,3 +1,4 @@
+import { colors, fontSize, fontWeight, radius, spacing } from "@/token";
 import { Keyboard, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function Index() {
@@ -26,8 +27,8 @@ export default function Index() {
                 autoCorrect={false}
                 keyboardType="email-address"
                 placeholder="you@example.com"
-                placeholderTextColor="#8A9490"
-                selectionColor="#245C49"
+                placeholderTextColor={colors.placeholder}
+                selectionColor={colors.primary}
               />
             </View>
 
@@ -40,9 +41,9 @@ export default function Index() {
                 autoComplete="current-password"
                 autoCorrect={false}
                 placeholder="Enter your password"
-                placeholderTextColor="#8A9490"
+                placeholderTextColor={colors.placeholder}
                 secureTextEntry
-                selectionColor="#245C49"
+                selectionColor={colors.primary}
               />
             </View>
 
@@ -70,91 +71,91 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#F4F5F0",
-    paddingHorizontal: 24,
-    paddingVertical: 32,
+    backgroundColor: colors.background,
+    paddingHorizontal: spacing["2xl"],
+    paddingVertical: spacing["4xl"],
   },
   content: {
     width: "100%",
     maxWidth: 440,
-    gap: 28,
+    gap: spacing["3xl"],
   },
   brand: {
-    color: "#245C49",
-    fontSize: 28,
-    fontWeight: "800",
+    color: colors.primary,
+    fontSize: fontSize["2xl"],
+    fontWeight: fontWeight.extrabold,
     letterSpacing: -1,
     textAlign: "center",
   },
   card: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E2E7DF",
+    backgroundColor: colors.surface,
+    borderColor: colors.border,
     borderWidth: 1,
-    borderRadius: 24,
-    padding: 28,
+    borderRadius: radius.lg,
+    padding: spacing["3xl"],
   },
   eyebrow: {
-    color: "#567362",
-    fontSize: 10,
-    fontWeight: "700",
+    color: colors.textAccent,
+    fontSize: fontSize.xs,
+    fontWeight: fontWeight.bold,
     letterSpacing: 1.6,
-    marginBottom: 12,
+    marginBottom: spacing.sm,
   },
   title: {
-    color: "#1D3027",
-    fontSize: 30,
-    fontWeight: "700",
+    color: colors.text,
+    fontSize: fontSize["3xl"],
+    fontWeight: fontWeight.bold,
     letterSpacing: -0.8,
   },
   subtitle: {
-    color: "#6F7B74",
-    fontSize: 14,
+    color: colors.textMuted,
+    fontSize: fontSize.lg,
     lineHeight: 22,
-    marginTop: 8,
+    marginTop: spacing.xs,
   },
   form: {
-    gap: 20,
-    marginTop: 32,
+    gap: spacing.xl,
+    marginTop: spacing["4xl"],
   },
   field: {
-    gap: 8,
+    gap: spacing.xs,
   },
   label: {
-    color: "#34483C",
-    fontSize: 13,
-    fontWeight: "600",
+    color: colors.textSecondary,
+    fontSize: fontSize.md,
+    fontWeight: fontWeight.semibold,
   },
   input: {
-    backgroundColor: "#FAFBF8",
-    borderColor: "#DCE3DA",
+    backgroundColor: colors.surfaceMuted,
+    borderColor: colors.inputBorder,
     borderWidth: 1,
-    borderRadius: 12,
-    color: "#1D3027",
-    fontSize: 15,
+    borderRadius: radius.sm,
+    color: colors.text,
+    fontSize: fontSize.xl,
     minHeight: 52,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.md,
   },
   button: {
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#245C49",
-    borderRadius: 12,
+    backgroundColor: colors.primary,
+    borderRadius: radius.sm,
     minHeight: 52,
-    marginTop: 4,
-    padding: 14,
+    marginTop: spacing.xxs,
+    padding: spacing.md,
   },
   buttonPressed: {
-    backgroundColor: "#1B4637",
+    backgroundColor: colors.primaryPressed,
   },
   buttonText: {
-    color: "#FFFFFF",
-    fontSize: 15,
-    fontWeight: "700",
+    color: colors.surface,
+    fontSize: fontSize.xl,
+    fontWeight: fontWeight.bold,
   },
   footer: {
-    color: "#7B867E",
-    fontSize: 12,
+    color: colors.textSubtle,
+    fontSize: fontSize.sm,
     textAlign: "center",
   },
 });
